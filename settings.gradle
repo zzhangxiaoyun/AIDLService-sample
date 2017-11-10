@@ -1,1 +1,1 @@
-include ':service', ':aidl', ':client', ':launcher2'
+include ':service', ':aidl', ':client', ':launcher2', ':widgetscan'

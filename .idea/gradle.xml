@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/client" />
             <option value="$PROJECT_DIR$/launcher2" />
             <option value="$PROJECT_DIR$/service" />
+            <option value="$PROJECT_DIR$/widgetscan" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
