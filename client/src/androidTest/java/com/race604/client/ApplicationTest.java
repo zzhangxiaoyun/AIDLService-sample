@@ -1,4 +1,4 @@
-package com.race604.client;
+package com.race604.client0;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

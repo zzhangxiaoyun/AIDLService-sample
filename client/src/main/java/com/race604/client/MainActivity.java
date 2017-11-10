@@ -1,4 +1,4 @@
-package com.race604.client;
+package com.race604.client0;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -115,9 +115,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (mIsBound) {
-            unbindService(mServiceConnection);
-        }
+//        if (mIsBound) {
+//            unbindService(mServiceConnection);
+//        }
     }
 
     @Override
@@ -126,7 +126,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.bind:
                 Intent intent = new Intent(IRemoteService.class.getName());
                 intent.setClassName("com.race604.remoteservice", "com.race604.remoteservice.RemoteService");
-                //intent.setPackage("com.race604.remoteservice");
                 bindService(intent, mServiceConnection, BIND_AUTO_CREATE);
                 mIsBound = true;
                 break;
