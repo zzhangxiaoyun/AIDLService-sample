@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AIDLService-sample.iml" filepath="$PROJECT_DIR$/AIDLService-sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/aidl/aidl.iml" filepath="$PROJECT_DIR$/aidl/aidl.iml" />
       <module fileurl="file://$PROJECT_DIR$/client/client.iml" filepath="$PROJECT_DIR$/client/client.iml" />
       <module fileurl="file://$PROJECT_DIR$/launcher2/launcher2.iml" filepath="$PROJECT_DIR$/launcher2/launcher2.iml" />
       <module fileurl="file://$PROJECT_DIR$/sdcardWidgetLoad/sdcardWidgetLoad.iml" filepath="$PROJECT_DIR$/sdcardWidgetLoad/sdcardWidgetLoad.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/skills.iml" filepath="$PROJECT_DIR$/skills.iml" />
       <module fileurl="file://$PROJECT_DIR$/widgets/widgets.iml" filepath="$PROJECT_DIR$/widgets/widgets.iml" />
       <module fileurl="file://$PROJECT_DIR$/widgetscan/widgetscan.iml" filepath="$PROJECT_DIR$/widgetscan/widgetscan.iml" />
     </modules>
