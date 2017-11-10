@@ -7,7 +7,7 @@ import android.os.RemoteCallbackList;
 import android.os.RemoteException;
 import android.util.Log;
 
-import com.race604.servicelib.IParticipateCallback;
+import com.race604.servicelib.IUpateRemoteViewsCallback;
 import com.race604.servicelib.IRemoteService;
 
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class RemoteService extends Service {
 
     private List<Client> mClients = new ArrayList<>();
 
-    private RemoteCallbackList<IParticipateCallback> mCallbacks = new RemoteCallbackList<>();
+    private RemoteCallbackList<IUpateRemoteViewsCallback> mCallbacks = new RemoteCallbackList<>();
 
     private final IRemoteService.Stub mBinder = new IRemoteService.Stub() {
         @Override
@@ -74,12 +74,12 @@ public class RemoteService extends Service {
         }
 
         @Override
-        public void registerParticipateCallback(IParticipateCallback cb) throws RemoteException {
+        public void registerParticipateCallback(IUpateRemoteViewsCallback cb) throws RemoteException {
             mCallbacks.register(cb);
         }
 
         @Override
-        public void unregisterParticipateCallback(IParticipateCallback cb) throws RemoteException {
+        public void unregisterParticipateCallback(IUpateRemoteViewsCallback cb) throws RemoteException {
             mCallbacks.unregister(cb);
         }
     };
@@ -101,7 +101,7 @@ public class RemoteService extends Service {
         for (int i = 0; i < len; i++) {
             try {
                 // 通知回调
-                mCallbacks.getBroadcastItem(i).onParticipate(name, joinOrLeave);
+                mCallbacks.getBroadcastItem(i).onUpdateRemoteViews(name);
             } catch (RemoteException e) {
                 e.printStackTrace();
             }

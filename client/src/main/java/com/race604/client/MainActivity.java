@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.race604.servicelib.IParticipateCallback;
+import com.race604.servicelib.IUpateRemoteViewsCallback;
 import com.race604.servicelib.IRemoteService;
 
 import java.util.List;
@@ -56,17 +56,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
     };
 
-    private IParticipateCallback mParticipateCallback = new IParticipateCallback.Stub() {
+    private IUpateRemoteViewsCallback mParticipateCallback = new IUpateRemoteViewsCallback.Stub() {
 
         @Override
-        public void onParticipate(String name, boolean joinOrLeave) throws RemoteException {
-            if (joinOrLeave) {
+        public void onUpdateRemoteViews(String name) throws RemoteException {
+
                 mAdapter.add(name);
-            } else {
-                mAdapter.remove(name);
-            }
+
         }
     };
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
